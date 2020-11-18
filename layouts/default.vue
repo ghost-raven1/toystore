@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="uk-animation-fade">
     <Header />
 
     <div class="uk-section uk-section-default">
@@ -15,9 +15,10 @@
 
 <script>
 import Header from '~/components/Header.vue'
+
 export default {
   components: {
-    Header
+    Header,
   }
 }
 </script>

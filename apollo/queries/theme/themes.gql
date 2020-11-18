@@ -1,0 +1,10 @@
+query themes {
+  themes {
+    id
+    name
+    description
+    image {
+      url
+    }
+  }
+}

@@ -4,7 +4,7 @@
   <div class="uk-child-width-1-2@m uk-grid">
       <div>
           <div class="uk-card uk-card-default uk-card-small uk-card-body">
-            <img src="https://assets-ouch.icons8.com/preview/457/0b338840-2e33-432e-a547-4d3e5acc960c.png" height="500" width="500" class="uk-align-center" alt="">
+            <img src="https://assets-ouch.icons8.com/preview/457/0b338840-2e33-432e-a547-4d3e5acc960c.png" height="500" width="500" class="uk-align-center uk-animation-fade uk-transform-origin-bottom-right" alt="">
           </div>
       </div>
       <div>

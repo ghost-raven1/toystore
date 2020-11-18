@@ -26,7 +26,7 @@
         </tbody>
     </table>
 
-    <button class="uk-button uk-button-primary" name="button">Оформить заказ ({{ price }}P)</button>
+    <button class="uk-button uk-button-primary" @click="goToCheckout" name="button">Оформить заказ ({{ price }}P)</button>
   </div>
 
 </div>
@@ -40,7 +40,16 @@ export default {
     ...mapMutations({
       addToCart: 'cart/add',
       removeFromCart: 'cart/remove'
-    })
+    }),
+        goToCheckout() {
+      // Redirect to signin page if not logged in.
+      const isConnected = this.$store.getters['auth/username']
+      if (!isConnected) {
+        this.$router.push('/users/signin')
+        return
+      }
+      this.$router.push('/orders/checkout')
+    }
   },
   computed: {
     id() {

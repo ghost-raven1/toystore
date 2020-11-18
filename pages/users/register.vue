@@ -5,7 +5,7 @@
       <div>
 
           <div class="uk-card uk-card-default uk-card-small uk-card-body">
-            <img src="https://assets-ouch.icons8.com/preview/294/e25a0374-0657-45d5-98d9-2408473a744c.png" height="500" width="500" class="uk-align-center" alt="">
+            <img src="https://assets-ouch.icons8.com/preview/294/e25a0374-0657-45d5-98d9-2408473a744c.png" height="500" width="500" class="uk-align-center uk-animation-fade uk-transform-origin-bottom-right" alt="">
           </div>
       </div>
       <div>

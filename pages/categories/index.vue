@@ -8,7 +8,7 @@
 
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" v-for="category in filteredList" v-bind:key="category.id" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
-              <img :src="'http://localhost:1337' + category.image.url" alt="" uk-cover>
+              <img uk-scrollspy="cls:uk-animation-fade" :src="'http://localhost:1337' + category.image.url" alt="" uk-cover>
               <canvas width="600" height="400"></canvas>
           </div>
           <div>
@@ -23,7 +23,7 @@
       </div>
 
       <div class="uk-container uk-container-center uk-text-center" v-if="filteredList.length == 0">
-       <img src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png" height="800" width="800">
+       <img class="uk-animation-fade" src="https://assets-ouch.icons8.com/preview/19/52de2377-696e-4194-8c63-0a81aef60b4f.png" height="800" width="800">
        <p>Категории товаров не найдены!</p>
      </div>
 
