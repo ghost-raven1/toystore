@@ -1,6 +1,6 @@
 <template>
 <div class="uk-card uk-card-default uk-card-body uk-margin" uk-sticky="offset: 20; bottom: true">
-  <img src="https://assets-ouch.icons8.com/preview/125/6414b067-ba59-46ef-8693-4e190aa466c7.png" class="uk-align-center" height="250" width="250" alt="" />
+  <img src="https://assets-ouch.icons8.com/preview/125/6414b067-ba59-46ef-8693-4e190aa466c7.png" class="uk-align-center uk-animation-fade" height="250" width="250" alt="" />
 
   <div v-if="price > 0">
 
@@ -26,7 +26,7 @@
         </tbody>
     </table>
 
-    <button class="uk-button uk-button-primary" @click="goToCheckout" name="button">Оформить заказ ({{ price }}P)</button>
+    <button class="uk-button uk-button-primary uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" @click="goToCheckout" name="button">Оформить заказ ({{ price }}P)</button>
   </div>
 
 </div>

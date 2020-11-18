@@ -8,7 +8,7 @@
 
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" v-for="category in filteredList" v-bind:key="category.id" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
-              <img uk-scrollspy="cls:uk-animation-fade" :src="'http://localhost:1337' + category.image.url" alt="" uk-cover>
+              <img uk-scrollspy="cls:uk-animation-fade" class="uk-border-rounded" :src="'http://localhost:1337' + category.image.url" alt="" uk-cover>
               <canvas width="600" height="400"></canvas>
           </div>
           <div>
@@ -16,7 +16,7 @@
                   <h3 class="uk-card-title">{{ category.name }}</h3>
                   <p>{{ category.description }}</p>
 
-                  <router-link :to="/categories/ + category.id" tag="a" class="uk-button uk-button-primary">Посмотреть товары
+                  <router-link :to="/categories/ + category.id" tag="a" class="uk-button uk-button-primary uk-border-rounded">Посмотреть товары
                   </router-link>
               </div>
           </div>

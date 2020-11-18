@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <a class="uk-button uk-button-primary uk-margin" @click="$router.go(-1)"><span uk-icon="arrow-left"></span> вернуться</a>
+  <a class="uk-button uk-button-primary uk-margin uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" @click="$router.go(-1)"><span uk-icon="arrow-left"></span> вернуться</a>
 
   <client-only placeholder="Chargement...">
 
@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="uk-margin">
-                    <button class="uk-button uk-button-primary" v-if="$route.path !== '/orders/checkout'" @click="goToCheckout" name="button">Оформить заказ ({{ price }}P)</button>
+                    <button class="uk-button uk-button-primary uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" v-if="$route.path !== '/orders/checkout'" @click="goToCheckout" name="button">Оформить заказ ({{ price }}P)</button>
                     </div>
 
                 </fieldset>

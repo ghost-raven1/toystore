@@ -8,7 +8,7 @@
 
       <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" v-for="theme in filteredList" v-bind:key="theme.id" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
-              <img class="uk-animation-fade" :src="'http://localhost:1337' + theme.image.url" alt="" uk-cover>
+              <img uk-scrollspy="cls:uk-animation-fade" class="uk-border-rounded" :src="'http://localhost:1337' + theme.image.url" alt="" uk-cover>
               <canvas width="600" height="400"></canvas>
           </div>
           <div>
@@ -16,7 +16,7 @@
                   <h3 class="uk-card-title">{{ theme.name }}</h3>
                   <p>{{ theme.description }}</p>
 
-                  <router-link :to="/themes/ + theme.id" tag="a" class="uk-button uk-button-primary">Посмотреть статьи
+                  <router-link :to="/themes/ + theme.id" tag="a" class="uk-button uk-button-primary uk-border-rounded">Посмотреть статьи
                   </router-link>
               </div>
           </div>
