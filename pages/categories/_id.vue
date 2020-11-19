@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <a class="uk-button uk-button-primary uk-margin uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" @click="$router.go(-1)"><span uk-icon="arrow-left"></span> вернуться</a>
+  <BackBtn />
 
   <client-only>
   <div uk-grid>
@@ -17,7 +17,7 @@
                     <p>{{ product.description }}</p>
                 </div>
                 <div class="uk-card-footer">
-                  <button class="uk-button uk-button-primary" @click="addToCart(product)">Добавить в корзину</button>
+                  <button class="uk-button uk-button-primary uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" @click="addToCart(product)">Добавить в корзину</button>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
       </div>
   </div>
 
-<a class="uk-button uk-button-primary uk-margin uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" href="#target" uk-scroll><span uk-icon="chevron-up"></span>подняться вверх</a>
+  <ToTopBtn />
 
   </client-only>
 </div>
@@ -39,6 +39,8 @@
 <script>
 import { mapMutations } from 'vuex'
 import Cart from '~/components/Cart.vue'
+import BackBtn from '~/components/btn/Back.vue'
+import ToTopBtn from '~/components/btn/ToTop.vue'
 import categoryQuery from '~/apollo/queries/category/category.gql'
 
 export default {
@@ -57,7 +59,9 @@ export default {
     }
   },
   components: {
-    Cart
+    Cart,
+    BackBtn,
+    ToTopBtn
   },
   methods:{
     ...mapMutations({

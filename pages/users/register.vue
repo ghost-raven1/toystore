@@ -31,9 +31,7 @@
                         <input class="uk-input" v-model="password" type="password">
                       </div>
 
-                      <div class="uk-margin">
-                        <button class="uk-button uk-button-primary uk-width-1-1 uk-border-rounded" :disabled="loading" type="submit">Отправить</button>
-                      </div>
+                      <SubmitBtn/>
 
                       <div class="uk-margin">
                         <p>
@@ -58,8 +56,12 @@
 // Import mapMutations in order to call mutations from your store
 import { mapMutations } from 'vuex'
 import strapi from '~/utils/Strapi'
+import SubmitBtn from '../../components/btn/Submit'
 
 export default {
+    components: {
+      SubmitBtn,
+  },
   data() {
     return {
       email: '',

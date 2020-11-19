@@ -1,7 +1,7 @@
 <template>
 <div>
 
-  <a class="uk-button uk-button-primary uk-margin uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" @click="$router.go(-1)"><span uk-icon="arrow-left"></span> вернуться</a>
+  <BackBtn />
 
   <client-only>
   <div uk-grid>
@@ -32,7 +32,8 @@
       </div>
 
   </div>
-<a class="uk-button uk-button-primary uk-margin uk-animation-fade uk-transform-origin-bottom-right uk-border-rounded" href="#target" uk-scroll><span uk-icon="chevron-up"></span>подняться вверх</a>
+
+  <ToTopBtn />
 
   </client-only>
 
@@ -40,7 +41,10 @@
 </template>
 
 <script>
+import BackBtn from '~/components/btn/Back.vue'
+import ToTopBtn from '~/components/btn/ToTop.vue'
 import themeQuery from '~/apollo/queries/theme/theme.gql'
+
 export default {
   data() {
     return {
@@ -55,6 +59,10 @@ export default {
         return { id: this.$route.params.id }
       }
     }
-  }
+  },
+    components: {
+    BackBtn,
+    ToTopBtn
+  },
 }
 </script>
