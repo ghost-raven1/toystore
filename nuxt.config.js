@@ -19,6 +19,8 @@ export default {
   css: [
     "uikit/dist/css/uikit.min.css",
     "uikit/dist/css/uikit.css",
+    '~/assets/css/badge-colors.css',
+    '~/assets/css/fix-styles.css'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -61,5 +63,6 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    extractCSS: true,
   }
 }

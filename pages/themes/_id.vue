@@ -7,7 +7,7 @@
   <div uk-grid>
 
       <div class="uk-width-small-1-2 uk-width-medium-1-4">
-        <div v-for="article in theme.articles" v-bind:key="article.id" class="uk-margin">
+        <div v-for="article in theme.articles" v-bind:key="article.id" class="uk-margin uk-card-hover uk-border-rounded">
             <div class="uk-card uk-card-default">
                 <div class="uk-card-media-top">
                     <img uk-scrollspy="cls:uk-animation-fade" class="uk-border-rounded" :src="'http://localhost:1337' + article.image.url" alt="" />

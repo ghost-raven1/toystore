@@ -6,7 +6,7 @@
           <input class="uk-search-input" v-model="query" type="search" placeholder="Поиск тем блога...">
       </form>
 
-      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin" v-for="theme in filteredList" v-bind:key="theme.id" uk-grid>
+      <div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@m uk-margin uk-card-hover uk-border-rounded" v-for="theme in filteredList" v-bind:key="theme.id" uk-grid>
           <div class="uk-card-media-left uk-cover-container">
               <img uk-scrollspy="cls:uk-animation-fade" class="uk-border-rounded" :src="'http://localhost:1337' + theme.image.url" alt="" uk-cover>
               <canvas width="600" height="400"></canvas>

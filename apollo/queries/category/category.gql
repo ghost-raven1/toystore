@@ -7,6 +7,12 @@ query Category($id: ID!) {
       name
       description
       price
+      weight_units
+      size_units
+      color
+      material
+      size
+      weight
       image {
         url
       }
